@@ -47,7 +47,7 @@ const Testimonials = () => {
                   <div className="text">
                      <h4>Rama moorthy</h4>
                      <p>
-                        &quot;The way you filmed my daughter's wedding was
+                        &quot;The way you filmed my daughter&apos;s wedding was
                         amazing. The album is beautiful too. VSA Creations did a
                         fast and neat job. &quot;
                      </p>
