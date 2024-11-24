@@ -1,0 +1,84 @@
+@use "../../GlobalStyles/breakPoints.scss" as *;
+.services {
+   &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      overflow-x: hidden;
+      scrollbar-width: none;
+
+      & .service {
+         display: flex;
+         align-items: center;
+         gap: 22px;
+
+         @include bpMax(l) {
+            flex-direction: column;
+         }
+         &:nth-child(even) {
+            flex-direction: row-reverse;
+            @include bpMax(l) {
+               flex-direction: column;
+            }
+
+            & .service_image {
+               transform: translateX(50%);
+            }
+         }
+         &:nth-child(odd) {
+            & .service_image {
+               transform: translateX(-200px);
+            }
+         }
+         &_image {
+            width: 600px;
+            height: 400px;
+            opacity: 0;
+
+            @include bpMax(l) {
+               width: 100%;
+            }
+            @include bpMax(m) {
+               height: 300px;
+            }
+
+            & img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         &_text {
+            width: 30%;
+            opacity: 0;
+            @include bpMax(l) {
+               width: 70%;
+               text-align: center;
+            }
+            @include bpMax(m) {
+               width: 100%;
+            }
+            & h2 {
+               font-size: 22px;
+            }
+
+            & p {
+               color: rgb(99, 99, 99);
+               font-weight: 300;
+
+               &.price {
+                  color: #000;
+                  font-size: 14px;
+                  & span {
+                     font-weight: 600;
+
+                     &.rupee-icon {
+                        font-size: 13px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

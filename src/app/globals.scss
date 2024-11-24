@@ -1,0 +1,77 @@
+@use "./GlobalStyles/breakPoints.scss" as *;
+
+body {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   box-sizing: border-box;
+   //font-family: "Michroma", serif;
+   font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+   -webkit-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+   -webkit-text-fill-color: #000 !important;
+}
+
+p {
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 26px;
+   font-family: "Poppins", sans-serif;
+   @include bpMax(m) {
+      font-size: 16px;
+   }
+}
+h1 {
+   font-size: 42px;
+   @include bpMax(m) {
+      font-size: 32px;
+   }
+}
+.section-title {
+   h2 {
+      text-align: center;
+      margin-bottom: 32px;
+      font-weight: 400;
+      font-size: 32px;
+      @include bpMax(m) {
+         font-size: 26px;
+         margin-bottom: 18px;
+      }
+   }
+}
+
+h2 {
+   font-weight: 400;
+}
+input,
+textarea,
+button {
+   font-family: "Poppins", sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+section.style {
+   margin: 100px 0;
+   padding: 0 64px;
+   scroll-margin-top: 100px;
+   @include bpMax(m) {
+      padding: 0 16px;
+      margin: 40px 0;
+   }
+}
