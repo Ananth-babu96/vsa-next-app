@@ -21,9 +21,14 @@ const Contact = () => {
       e.preventDefault();
       setIsLoading(true);
       emailjs
-         .sendForm("service_krg885k", "template_kiu2kib", formRef.current, {
-            publicKey: "kLT-SV_WOL0QSPbv8",
-         })
+         .sendForm(
+            process.env.NEXT_PUBLIC_SERVICE_ID,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID,
+            formRef.current,
+            {
+               publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+            }
+         )
          .then(
             () => {
                console.log("success");
