@@ -42,7 +42,7 @@ const About = () => {
             <div className="text" ref={textRef}>
                <p>
                   <span> VSA Creations</span> is your go-to place for all your
-                  photography needs. Whether it's a wedding, pre-wedding,
+                  photography needs. Whether it&apos;s a wedding, pre-wedding,
                   maternity, baby shoot, candid shoot, or bridal shoot, we
                   handle it all. We promise to deliver the best work, with
                   albums ready in no time.

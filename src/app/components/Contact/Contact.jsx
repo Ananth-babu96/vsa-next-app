@@ -55,7 +55,7 @@ const Contact = () => {
                </div>
                <h4>Thanks for reaching out to VSA CREATIONS</h4>
                <p>We will get back to you as soon as possible!</p>
-               <p>"have a great one"</p>
+               <p>&quot;have a great one&quot;</p>
 
                <button onClick={() => setSuccess(false)}>close</button>
             </div>
@@ -65,9 +65,9 @@ const Contact = () => {
          </div>
          <div className="contact_content">
             <p>
-               Let's capture your special moments! Fill out the form below to
-               inquire about availability, packages, or any questions you may
-               have. We can't wait to connect with you!
+               Let&apos;s capture your special moments! Fill out the form below
+               to inquire about availability, packages, or any questions you may
+               have. We can&apos;t wait to connect with you!
             </p>
             <form onSubmit={handleSubmit} ref={formRef}>
                <input
