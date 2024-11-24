@@ -6,6 +6,9 @@ import logo from "../../../../public/logo/vsa-logo.png";
 
 const Navbar = ({ aboutRef, galleryRef, servicesRef, contactRef }) => {
    const [menuOpen, setMenuOpen] = useState(false);
+   const toggleMenu = () => {
+      setMenuOpen(!menuOpen);
+   };
    const scrollTo = (reference) => {
       if (typeof window !== "undefined") {
          reference.current.scrollIntoView({
@@ -34,13 +37,23 @@ const Navbar = ({ aboutRef, galleryRef, servicesRef, contactRef }) => {
          </ul>
          <div
             className={`mobile-menu-btn ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={toggleMenu}
+            aria-label="toggle navigation menu"
+            role="button"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onKeyDown={(e) => {
+               if (e.key === "Enter" || e.key === " ") toggleMenu();
+            }}
          >
             <div></div>
             <div></div>
             <div></div>
          </div>
-         <ul className={`navbar_mobile-menu ${menuOpen ? "show" : ""}`}>
+         <ul
+            className={`navbar_mobile-menu ${menuOpen ? "show" : ""}`}
+            id="mobile-menu"
+         >
             <li onClick={() => scrollTo(aboutRef)}>about</li>
             <li onClick={() => scrollTo(galleryRef)}>gallery</li>
             <li onClick={() => scrollTo(servicesRef)}>services</li>
