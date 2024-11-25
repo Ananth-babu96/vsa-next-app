@@ -1,11 +1,6 @@
 import "./globals.scss";
-import { Roboto, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const roboto = Roboto({
-   subsets: ["latin"],
-   weight: ["400", "300", "500"],
-   display: "swap",
-});
 const poppins = Poppins({
    subsets: ["latin"],
    weight: ["300", "400", "500", "600"],
@@ -13,8 +8,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-   title: "vsa creations",
-   description: "one stop solution for all photography needs",
+   title: "No. 1 Photography in Kumbakonam - Weddings, Events | VSA Creations",
+   description:
+      "VSA Creations, the top-rated photography studio in Kumbakonam, specializes in weddings, events, and baby shoots. Trust us to turn your memories into timeless art!",
+   robots: "index,follow",
 };
 
 export default function RootLayout({ children }) {
