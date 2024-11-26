@@ -1,7 +1,5 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { formAction } from "@/app/actions/action";
-import Form from "next/form";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import DotsAnimation from "../DotsAnimation/DotsAnimation";
