@@ -16,7 +16,7 @@ export default function Home() {
    const contactRef = useRef(null);
    return (
       <main>
-         <section>
+         {/* <section>
             <Navbar
                aboutRef={aboutRef}
                galleryRef={galleryRef}
@@ -45,7 +45,10 @@ export default function Home() {
          </section>
          <section>
             <Footer />
-         </section>
+         </section> */}
+         <h1 style={{ display: "flex", justifyContent: "center" }}>
+            404 page not found
+         </h1>
       </main>
    );
 }
